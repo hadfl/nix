@@ -1083,6 +1083,7 @@ pub fn pipe() -> Result<(RawFd, RawFd)> {
           target_os = "dragonfly",
           target_os = "emscripten",
           target_os = "freebsd",
+          target_os = "illumos",
           target_os = "linux",
           target_os = "redox",
           target_os = "netbsd",

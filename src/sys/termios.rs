@@ -540,7 +540,7 @@ libc_enum! {
         VINTR,
         VKILL,
         VLNEXT,
-        #[cfg(not(all(target_os = "linux", target_arch = "sparc64")))]
+        #[cfg(not(any(all(target_os = "linux", target_arch = "sparc64"), target_os = "illumos")))]
         VMIN,
         VQUIT,
         VREPRINT,
@@ -559,7 +559,7 @@ libc_enum! {
         VSWTC,
         #[cfg(any(target_os = "haiku", target_os = "illumos", target_os = "solaris"))]
         VSWTCH,
-        #[cfg(not(all(target_os = "linux", target_arch = "sparc64")))]
+        #[cfg(not(any(all(target_os = "linux", target_arch = "sparc64"), target_os = "illumos")))]
         VTIME,
         VWERASE,
         #[cfg(target_os = "dragonfly")]
